@@ -3,6 +3,25 @@ body {
     width: 100%;
     flex-direction: column;
     flex-wrap: wrap;
+    margin: 0;
+}
+
+a {
+    color: black;
+}
+
+a:link {
+    background-color: hotpink;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 20px;
+}
+
+a:hover {
+    background-color: rgb(230, 43, 137);
 }
 
 mark {
@@ -16,10 +35,9 @@ header {
 }
 
 .förstapic {
-
     max-width: 100%;
     height: auto;
-    margin-right: 1%;
+    margin-right: 2%;
 }
 
 h1 {
@@ -33,6 +51,10 @@ h1 {
 
 }
 
+.intro {
+    text-align: center;
+}
+
 .ul {
     flex-direction: column;
     align-items: center;
@@ -44,7 +66,9 @@ h1 {
     justify-content: center;
     /* flex-direction: row; */
     flex-wrap: wrap;
-    margin-left: 5%
+    margin-left: 5%;
+    margin-bottom: 1%;
+
 }
 
 table,
@@ -57,6 +81,7 @@ td {
     align-items: center;
     margin-top: 2%;
     margin-bottom: 2%;
+    margin-left: 1%;
 }
 
 
@@ -67,8 +92,22 @@ section {
     align-items: center;
     flex-direction: column;
     background-color: rgb(246, 206, 241);
+}
+
+.sifhemsida {
+    display: flex;
+    align-items: center;
 
 }
+
+.sifhemsida a {
+    padding: 3px 3px;
+    background-color: rgb(220, 217, 220);
+    border: 1px solid rgb(11, 10, 11);
+    margin-left: 3px;
+    border-radius: 0%;
+}
+
 
 iframe {
     max-width: 100%;
@@ -96,7 +135,7 @@ iframe {
 }
 
 
-img.stor-bild {
+.stor-bild {
     grid-row: span 2 / auto;
     grid-column: span 2 / auto;
     width: 100%;
@@ -104,9 +143,29 @@ img.stor-bild {
     object-fit: cover;
 }
 
-img.lang-bild {
+.lang-bild {
     grid-column: span 2 / auto;
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+@media screen and (max-width: 700px) {
+    .bildgrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: gray;
+}
+
+.footerpic {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
